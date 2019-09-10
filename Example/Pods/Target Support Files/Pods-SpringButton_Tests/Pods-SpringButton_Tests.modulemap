@@ -1,0 +1,6 @@
+framework module Pods_SpringButton_Tests {
+  umbrella header "Pods-SpringButton_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}
