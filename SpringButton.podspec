@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'SpringButton'
-  s.version          = '0.1.0'
+  s.version          = '0.1.1'
   s.summary          = 'A custom UIButton with a spring animation.'
 
 # This description is used to generate tags and improve search results.

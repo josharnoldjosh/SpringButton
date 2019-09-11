@@ -70,7 +70,7 @@ open class SpringButton: UIButton {
     public var bounce:CGFloat! = 15
     
     /** The appearance of the button. */
-    public var style:SpringButtonType = .Rounded {
+    public var style:SpringButtonType = .Default {
         didSet {
             self.setStyle()
         }
@@ -80,7 +80,7 @@ open class SpringButton: UIButton {
         fatalError("init(coder:) has not been implemented")
     }
     
-    public init(style:SpringButtonType = .Rounded) {
+    public init(style:SpringButtonType = .Default) {
         super.init(frame: CGRect(x: 0, y: 0, width: 150, height: 50))
         if let center = UIApplication.shared.keyWindow?.rootViewController?.view.center {
             self.center = center
@@ -90,7 +90,7 @@ open class SpringButton: UIButton {
         self.configure()
     }
     
-    public init(frame: CGRect, style:SpringButtonType = .Rounded) {
+    public init(frame: CGRect, style:SpringButtonType = .Default) {
         super.init(frame: frame)
         self.style = style
         self.setStyle()
