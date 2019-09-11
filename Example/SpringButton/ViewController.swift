@@ -7,12 +7,18 @@
 //
 
 import UIKit
+import SpringButton
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        let button = SpringButton(style: .Rounded)
+        button.center = view.center
+        button.text = "Hello world"
+        view.addSubview(button)
+        
     }
 
     override func didReceiveMemoryWarning() {
