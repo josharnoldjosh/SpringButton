@@ -14,8 +14,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let button = SpringButton(style: .Rounded)
-        button.center = view.center
+        let button = SpringButton(style: .Default)
+        button.center = view.center        
         button.text = "Hello world"
         view.addSubview(button)
         

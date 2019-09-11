@@ -11,7 +11,7 @@ import pop
 
 public enum SpringButtonType {
     case Minimal
-    case Rounded
+    case Default
     case Outline
 }
 
@@ -70,9 +70,6 @@ open class SpringButton: UIButton {
     public var bounce:CGFloat! = 15
     
     /** The appearance of the button. */
-    private var _style:SpringButtonType = .Rounded
-    
-    /** The appearance of the button. */
     public var style:SpringButtonType = .Rounded {
         didSet {
             self.setStyle()
@@ -116,15 +113,20 @@ open class SpringButton: UIButton {
     }
     
     private func setStyle() {
-        if _style == .Rounded {
+        if style == .Default {
             self.backgroundColor = color
             self.layer.borderColor = UIColor.clear.cgColor
-        }else if _style == .Outline {
+            self.layer.borderWidth = 0
+        }else if style == .Outline {
             self.backgroundColor = UIColor.clear
+            self.textColor = self.color
             self.layer.borderColor = self.color.cgColor
-        }else if _style == .Minimal {
+            self.layer.borderWidth = 1
+        }else if style == .Minimal {
             self.backgroundColor = UIColor.clear
             self.layer.borderColor = UIColor.clear.cgColor
+            self.layer.borderWidth = 0
+            self.textColor = self.color
         }
     }
     
