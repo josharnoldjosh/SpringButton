@@ -131,7 +131,7 @@ open class SpringButton: UIButton {
     }
     
     /** Called when the button is pressed */
-    @objc func pressed() {
+    @objc public func pressed() {
         let anim = POPSpringAnimation.init(propertyNamed: kPOPLayerScaleXY)
         anim?.fromValue = CGSize(width: 1, height: 1)
         anim?.toValue = CGSize(width: 1*buttonScale, height: 1*buttonScale)
@@ -141,7 +141,7 @@ open class SpringButton: UIButton {
     }
     
     /** Called when the button is released */
-    @objc func released() {
+    @objc public func released() {
         let anim = POPSpringAnimation.init(propertyNamed: kPOPLayerScaleXY)
         anim?.toValue = CGSize(width: 1, height: 1)
         anim?.fromValue = CGSize(width: 1*buttonScale, height: 1*buttonScale)
